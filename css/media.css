@@ -1,0 +1,49 @@
+@media(max-width:1600px){
+  #hero-content h1 {
+    font-size: 55px;
+}
+#hero-content h2 {
+  line-height: 40px;
+}
+.slide .item img {
+  width: 110%;
+}
+.home-products-slider .item .item-content h2 {
+  font-size: 20px;
+}
+}
+
+@media (max-width: 1536px) {
+  .home-products-slider .item .item-content h2 {
+      font-size: 19px;
+  }
+  .slide .item img {
+    width: 120%;
+}
+}
+@media (max-width: 1470px) {
+.common-heading{
+  font-size: 32px;
+}
+.about-us .about-right-content h2 {
+  font-size: 20px;
+  line-height: 34px;
+}
+.home-products-slider {
+  margin-top: 60px;
+}
+.home-products-slider .item .item-content{
+  padding: 17px;
+}
+.know-more {
+  padding: 7px 8px;
+  font-size: 15px;
+}
+.mt-55 {
+  margin-top: 50px;
+}
+
+#lightgallery {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+}

@@ -76,13 +76,69 @@ $('.home-products-slider .owl-carousel').owlCarousel({
 	lazyLoad:true,
 	loop:true,
 	autoplay:false,
-	margin: 10,
-	nav: true,
+	margin: 40,
+	nav: false,
 	dots: false,
 	responsiveRefreshRate: 10,
 	autoplayTimeout: 7000,
 	smartSpeed: 800,
-	responsiveRefreshRate: 10
+	responsiveRefreshRate: 10,
+	responsive:{
+		0:{
+			items:1
+		},
+		600:{
+			items:1
+		},
+		1280:{
+			items:2
+		},
+		1281:{
+			items:3
+		}
+	}
+});
+
+
+  //Product Paragraph Text Truncate Js
+	let strlength = 100;
+	var elements = document.querySelectorAll('.truncate-text');
+	for(let i = 0; i < elements.length; i++){
+			let str = elements[i].innerHTML;
+			if (str.length > strlength) {
+					str = str.substring(0, strlength),
+					str.replace(/\w+$/, '');
+					str +='..';
+					elements[i].innerHTML = str;
+				}
+	}
+
+	//Home Slick carousel
+var $slide = $(".slide")
+  .slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    autoplay: true
+  })
+  .on({
+    beforeChange: function(event, slick, currentSlide, nextSlide) {
+      $(".slick-slide", this).eq(currentSlide).addClass("preve-slide");
+      $(".slick-slide", this).eq(nextSlide).addClass("slide-animation");
+    },
+    afterChange: function() {
+      $(".preve-slide", this).removeClass("preve-slide　slide-animation");
+    }
+  });
+$slide.find(".slick-slide").eq(0).addClass("slide-animation");
+
+//Lightgallery script
+$(document).ready(function() {
+	$("#lightgallery").lightGallery(); 
 });
 
 
