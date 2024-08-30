@@ -70,38 +70,8 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-//Home Products Slider
-$('.home-products-slider .owl-carousel').owlCarousel({
-	items:3,
-	lazyLoad:true,
-	loop:true,
-	autoplay:false,
-	margin: 40,
-	nav: false,
-	dots: false,
-	responsiveRefreshRate: 10,
-	autoplayTimeout: 7000,
-	smartSpeed: 800,
-	responsiveRefreshRate: 10,
-	responsive:{
-		0:{
-			items:1
-		},
-		600:{
-			items:1
-		},
-		1280:{
-			items:2
-		},
-		1281:{
-			items:3
-		}
-	}
-});
-
-
   //Product Paragraph Text Truncate Js
-	let strlength = 100;
+	let strlength = 110;
 	var elements = document.querySelectorAll('.truncate-text');
 	for(let i = 0; i < elements.length; i++){
 			let str = elements[i].innerHTML;
